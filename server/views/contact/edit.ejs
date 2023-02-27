@@ -1,0 +1,28 @@
+<%-include ../partials/header.ejs%>
+<%-include ../partials/main_nav.ejs%>
+  <main class="container" style="margin-top:100px;">
+    <div class="row">
+        <div class="offset-md-3 col-md-6 mt-3">
+            <h1> <%= title %> </h1>
+            <form class="form" method="post">
+                <div class="form-group mb-3">
+                    <label for="name" class="form-label">Contact Name</label>
+                    <input type="text" class="form-control" id="nameTextField" placeholder="Enter Contact Name" name="name" value="<%=contact.name%>" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="name" class="form-label">Contact Email</label>
+                    <input type="email" class="form-control" id="emailTextField" placeholder="Enter Email" name="email" value="<%=contact.email%>" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="name" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" id="numberTextField" placeholder="Enter Number" name="number" value="<%=contact.number%>" required>
+                </div>
+                <div class="form-group d-flex justify-content-evenly">
+                    <button type="submit" class="btn btn-primary w-25">Update</button>
+                    <a href="/businessContact" class="btn btn-secondary w-25">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+  </main>
+<%-include ../partials/footer.ejs%>
